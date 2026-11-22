@@ -1,4 +1,4 @@
-# Environment & Dependencies — eps-clt-and-benfords-law
+﻿# Environment & Dependencies — eps-clt-and-benfords-law
 
 This is an **R**-kernel notebook. There is no `requirements.txt` (Python-only
 convention); the environment is documented here instead.

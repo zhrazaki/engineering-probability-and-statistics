@@ -1,4 +1,4 @@
-# Statistical Distribution Analysis — Titanic Passenger Data
+﻿# Statistical Distribution Analysis — Titanic Passenger Data
 
 Analysis of the statistical distributions underlying three passenger features of
 the Titanic dataset (`Age`, `Fare`, `ReactionTime`), followed by a Monte Carlo
@@ -9,8 +9,7 @@ study of exponentially distributed response times and the memoryless property.
 - **Course:** Engineering Probability and Statistics (EPS)
 - **Institution:** School of Electrical and Computer Engineering, University of Tehran
 - **Instructors:** Dr. Bahrak, Dr. Vahabie
-- **Deliverable:** Computer Assignment 4 (CA4), implemented as a single R-kernel
-  Jupyter notebook (`CA4.ipynb`)
+- **Format:** fully executed R-kernel Jupyter notebook (`titanic_distribution_analysis.ipynb`)
 
 ## Project Overview
 
@@ -45,6 +44,23 @@ The notebook is organized around two questions:
 | Part 1 | `count_from_exponential()`: event counts per fixed window from exponential inter-event times (with correct handling of samples overshooting the window) |
 | Part 2 | Comparison of simulated counts with Poisson (summary statistics, Q–Q plot); empirical and theoretical demonstration of memorylessness |
 
+## 📈 Key Visualizations
+
+Selected outputs from the committed notebook — the full set of plots, logs
+and metrics is embedded in the notebook itself.
+
+![Binomial simulation](figures/binomial_simulation.png)
+*Simulated `X ~ Binomial(N, p_joint)` — the number of passengers matching the recalled feature ranges.*
+
+![Binomial vs. Normal approximation](figures/binomial_vs_normal_approximation.png)
+*Exact binomial probability vs. the Normal approximation (with continuity correction).*
+
+![Poisson counts](figures/poisson_counts_vs_simulated.png)
+*Event counts produced by `count_from_exponential()` vs. Poisson-distributed samples.*
+
+![Poisson Q–Q plot](figures/poisson_qq_plot.png)
+*Q–Q plot of the simulated counts against Poisson theoretical quantiles.*
+
 ## Mathematical and Statistical Methods
 
 - Marginalization of a joint empirical distribution over binned features.
@@ -72,7 +88,7 @@ The notebook is organized around two questions:
 ```text
 eps-statistical-distribution-analysis/
 ├── README.md
-├── CA4.ipynb          # fully executed notebook with all outputs
+├── titanic_distribution_analysis.ipynb          # fully executed notebook with all outputs
 └── requirements.md    # environment and dependency instructions
 ```
 
@@ -91,7 +107,7 @@ repository; place `data.csv` next to the notebook before running.
 
 ### Google Colab
 
-1. Upload `CA4.ipynb` to Colab and switch the runtime to **R**
+1. Upload `titanic_distribution_analysis.ipynb` to Colab and switch the runtime to **R**
    (Runtime → Change runtime type → R).
 2. Upload `data.csv` to the session storage.
 3. Run all cells. The first cell installs `plotly`.
@@ -101,7 +117,7 @@ repository; place `data.csv` next to the notebook before running.
 ```bash
 # R ≥ 4.x with the IRkernel
 R -e "install.packages('IRkernel'); IRkernel::inst()"
-jupyter notebook CA4.ipynb
+jupyter notebook titanic_distribution_analysis.ipynb
 ```
 
 See `requirements.md` for the full dependency list.
@@ -139,4 +155,4 @@ All findings below are taken from the executed notebook.
 
 Assignment statements, question narratives, and starter code fragments are
 part of the course material for the EPS assignment; the analysis, completed
-implementations, and simulations are the student's work for CA4.
+implementations, and simulations are the student's work for this project.

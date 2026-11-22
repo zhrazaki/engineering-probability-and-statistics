@@ -1,4 +1,4 @@
-# Environment & Dependencies — eps-random-variables-stochastic-models
+﻿# Environment & Dependencies — eps-random-variables-stochastic-models
 
 This is an **R**-kernel notebook. There is no `requirements.txt` (Python-only
 convention); the environment is documented here instead.

@@ -1,4 +1,4 @@
-# Random Variables & Stochastic Models
+﻿# Random Variables & Stochastic Models
 
 Simulation-based study of sums of random variables, ratio distributions,
 covariance and dependence in real data, and a discrete Markov belief model
@@ -9,8 +9,7 @@ for robot localization.
 - **Course:** Engineering Probability and Statistics (EPS)
 - **Institution:** School of Electrical and Computer Engineering, University of Tehran
 - **Instructors:** Dr. Bahrak, Dr. Vahabie
-- **Deliverable:** Computer Assignment 5 (CA5), implemented as a single
-  R-kernel Jupyter notebook (`CA5.ipynb`)
+- **Format:** fully executed R-kernel Jupyter notebook (`stochastic_models.ipynb`)
 
 ## Project Overview
 
@@ -47,6 +46,29 @@ The notebook is organized around two questions:
 | 5 | Recursive belief update `P(X_t | E_{1:t})` with normalization (`model()` function) |
 | 8 | Evaluation: `plot_belief_maxima()` and `plot_belief_accuracy()` against the true trajectory over 300 moves |
 
+## 📈 Key Visualizations
+
+Selected outputs from the committed notebook — the full set of plots, logs
+and metrics is embedded in the notebook itself.
+
+![Gamma simulation](figures/gamma_sum_histogram.png)
+*Simulated weekly loss `D` — the sum of 7 i.i.d. `Exp(0.01)` variables (100,000 samples).*
+
+![Gamma density](figures/gamma_theoretical_pdf.png)
+*Theoretical Gamma(shape = 7, rate = 0.01) density over the simulated support.*
+
+![Beta distribution](figures/beta_pdf_vs_histogram.png)
+*Beta(7, 7) PDF compared with the histogram of the simulated weekly loss ratio.*
+
+![Autocorrelation](figures/temperature_autocorrelation.png)
+*Autocorrelation of daily temperature up to lag 100 (`airquality` dataset).*
+
+![WALL-E belief map](figures/wall_e_belief_map.png)
+*WALL-E belief distribution over the maze at one time step, with the true position marked.*
+
+![WALL-E accuracy](figures/wall_e_belief_accuracy.png)
+*Belief accuracy over the trajectory (localization evaluation).*
+
 ## Mathematical and Statistical Methods
 
 - Distribution of a sum of i.i.d. exponentials: **Gamma** with shape = number
@@ -72,7 +94,7 @@ The notebook is organized around two questions:
 ```text
 eps-random-variables-stochastic-models/
 ├── README.md
-├── CA5.ipynb          # fully executed notebook with all outputs
+├── stochastic_models.ipynb          # fully executed notebook with all outputs
 └── requirements.md    # environment and dependency instructions
 ```
 
@@ -80,7 +102,7 @@ eps-random-variables-stochastic-models/
 
 ### Google Colab
 
-1. Upload `CA5.ipynb` to Colab and switch the runtime to **R**.
+1. Upload `stochastic_models.ipynb` to Colab and switch the runtime to **R**.
 2. Run all cells. Setup cells install `dplyr`, `ggplot2`, and `magrittr`.
 3. No external data files are required: Question 1 is fully simulated, and
    Question 1's covariance part uses R's built-in `airquality` dataset.
@@ -89,7 +111,7 @@ eps-random-variables-stochastic-models/
 
 ```bash
 R -e "install.packages(c('IRkernel','dplyr','ggplot2','magrittr')); IRkernel::inst()"
-jupyter notebook CA5.ipynb
+jupyter notebook stochastic_models.ipynb
 ```
 
 See `requirements.md` for details.
@@ -125,4 +147,4 @@ All findings below are taken from the executed notebook.
 
 Assignment statements, question narratives, and point breakdowns are part of
 the course material for the EPS assignment; the completed implementations,
-theory answers, and simulations are the student's work for CA5.
+theory answers, and simulations are the student's work for this project.

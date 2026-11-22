@@ -1,4 +1,4 @@
-# Environment & Dependencies — eps-statistical-distribution-analysis
+﻿# Environment & Dependencies — eps-statistical-distribution-analysis
 
 This is an **R**-kernel notebook. There is no `requirements.txt` (Python-only
 convention); the environment is documented here instead.
@@ -28,7 +28,7 @@ IRkernel::inst()   # registers the R kernel with Jupyter
 
 ## Data
 
-`CA4.ipynb` reads `data.csv` from its working directory. This CSV is not
+`titanic_distribution_analysis.ipynb` reads `data.csv` from its working directory. This CSV is not
 redistributed with the repository; supply it before executing the notebook
 (see the "How to Run" section of the README).
 
