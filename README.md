@@ -45,11 +45,3 @@ verification of fundamental laws.
 - Notebooks were developed for Google Colab; every README explains how to run
   in Colab or local Jupyter.
 
-## 🔗 Standalone Repositories
-
-These projects are also published as independent repositories with full git
-history:
-
-[eps-statistical-distribution-analysis](https://github.com/zhrazaki/eps-statistical-distribution-analysis) ·
-[eps-random-variables-stochastic-models](https://github.com/zhrazaki/eps-random-variables-stochastic-models) ·
-[eps-clt-and-benfords-law](https://github.com/zhrazaki/eps-clt-and-benfords-law)
